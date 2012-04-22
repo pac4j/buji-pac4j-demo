@@ -6,6 +6,7 @@
 <%
 	Subject subject = SecurityUtils.getSubject();
 %>
-principal : <%=subject.getPrincipals()%><br />
+principal : <%=subject.getPrincipal()%><br />
+principals : <%=subject.getPrincipals()%><br />
 isAuthenticated : <%=subject.isAuthenticated()%><br />
 isRemembered : <%=subject.isRemembered()%><br />

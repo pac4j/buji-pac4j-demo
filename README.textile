@@ -1,5 +1,3 @@
 **scribe-up-shiro-demo** is a web application to test OAuth client support for Shiro based on "Scribe UP":https://github.com/leleuj/scribe-up library.
 
-The SVN patch **shiro-oauth-svn.parch** has to be applied from "SHIRO-119":https://issues.apache.org/jira/browse/SHIRO-119 on "shiro project trunk":http://svn.apache.org/repos/asf/shiro/trunk to build the shiro-oauth module in version 1.3.0-SNAPSHOT mandatory for the web application demo.
-
 The web app has to be launched on J2E web application server on port 8080 and default racine context (/). The shirodemo.localhost.com should point to localhost.

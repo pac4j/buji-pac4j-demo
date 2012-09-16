@@ -1,3 +1,21 @@
-**scribe-up-shiro-demo** is a web application to test OAuth client support for Shiro based on "buji-oauth extension":https://github.com/bujiio/buji-oauth (and "Scribe UP":https://github.com/leleuj/scribe-up library).
+h2. What is this project ?
 
-The web app has to be launched on J2E web application server on port 8080 and default racine context (/). The shirodemo.localhost.com should point to localhost.
+This *scribe-up-shiro-demo* project is a demo webapp to test OAuth client support for Shiro based on the "buji-oauth":https://github.com/bujiio/buji-oauth extension (and the "scribe-up":https://github.com/leleuj/scribe-up library).
+The web app is protected with the shiro & buji-oauth libraries : when a user tries to access a protected area, he's redirected to a specified OAuth provider (like Facebook, Twitter...) to log in and send back to the application after successfull authentication, authenticated and with a complete user profile.
+
+h2. Quick start & test 
+
+To start quickly, build the project and launch the web app with jetty :<pre><code>cd scribe-up-shiro-demo
+mvn clean install jetty:run</code></pre>
+
+To test,
+- call the "http://localhost:8080/facebook/index.jsp":http://localhost:8080/facebook/index.jsp url by clicking on the _facebook/index_ link
+- be sent to Facebook and log in
+- be redirected back to the application, authenticated and with a complete user profile.
+
+Or click on another link to be authenticated through another provider : GitHub, Google, LinkedIn, Twitter, Yahoo, Windows Live or WordPress.
+
+h2. Manual deployment
+
+You can also deploy manually this web application in your favorite web applications server :
+- scribe-up-shiro-demo on http://localhost:8080/

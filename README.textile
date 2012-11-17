@@ -1,11 +1,11 @@
 h2. What is this project ?
 
-This *scribe-up-shiro-demo* project is a demo webapp to test OAuth client support for Shiro based on the "buji-oauth":https://github.com/bujiio/buji-oauth extension (and the "scribe-up":https://github.com/leleuj/scribe-up library).
+This *buji-oauth-demo* project is a demo webapp to test OAuth client support for Shiro based on the "buji-oauth":https://github.com/bujiio/buji-oauth extension  *version >= 1.1.0* (and the "scribe-up":https://github.com/leleuj/scribe-up library).
 The web app is protected with the shiro & buji-oauth libraries : when a user tries to access a protected area, he's redirected to a specified OAuth provider (like Facebook, Twitter...) to log in and send back to the application after successfull authentication, authenticated and with a complete user profile.
 
 h2. Quick start & test 
 
-To start quickly, build the project and launch the web app with jetty :<pre><code>cd scribe-up-shiro-demo
+To start quickly, build the project and launch the web app with jetty :<pre><code>cd buji-oauth-demo
 mvn clean install jetty:run</code></pre>
 
 To test,
@@ -18,4 +18,4 @@ Or click on another link to be authenticated through another provider : GitHub, 
 h2. Manual deployment
 
 You can also deploy manually this web application in your favorite web applications server :
-- scribe-up-shiro-demo on http://localhost:8080/
+- buji-oauth-demo on http://localhost:8080/

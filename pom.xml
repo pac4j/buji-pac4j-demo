@@ -22,14 +22,14 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>1.4.1-SNAPSHOT</pac4jVersion>
+        <pac4jVersion>1.4.2-SNAPSHOT</pac4jVersion>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.buji</groupId>
             <artifactId>buji-pac4j</artifactId>
-            <version>1.2.0-SNAPSHOT</version>
+            <version>1.2.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>

@@ -1,3 +1,4 @@
+<%@page import="org.pac4j.core.exception.RequiresHttpAction"%>
 <%@page import="org.apache.shiro.subject.Subject"%>
 <%@page import="org.apache.shiro.SecurityUtils"%>
 <%@page import="org.leleuj.WebUtils"%>
@@ -32,12 +33,20 @@
 profile : <%=subject.getPrincipals()%>
 <br /><br />
 <hr />
-<a href="<%=fbClient.getRedirectionUrl(context)%>">Authenticate with Facebook</a><br />
-<a href="<%=twClient.getRedirectionUrl(context)%>">Authenticate with Twitter</a><br />
-<a href="<%=formClient.getRedirectionUrl(context)%>">Authenticate with form</a><br />
-<a href="<%=baClient.getRedirectionUrl(context)%>">Authenticate with basic auth</a><br />
-<a href="<%=casClient.getRedirectionUrl(context)%>">Authenticate with CAS</a><br />
-<form action="<%=myopenidClient.getRedirectionUrl(context)%>" method="POST">
+<%
+try {
+%>
+<a href="<%=fbClient.getRedirectionUrl(context, false, false)%>">Authenticate with Facebook</a><br />
+<a href="<%=twClient.getRedirectionUrl(context, false, false)%>">Authenticate with Twitter</a><br />
+<a href="<%=formClient.getRedirectionUrl(context, false, false)%>">Authenticate with form</a><br />
+<a href="<%=baClient.getRedirectionUrl(context, false, false)%>">Authenticate with basic auth</a><br />
+<a href="<%=casClient.getRedirectionUrl(context, false, false)%>">Authenticate with CAS</a><br />
+<form action="<%=myopenidClient.getRedirectionUrl(context, false, false)%>" method="POST">
   <input type="text" name="openIdUser" value="http://xxx.myopenid.com/" />
   <input type="submit" value="Authenticate with myopenid.com" />
 </form>
+<%
+} catch (RequiresHttpAction e) {
+	// should not happen
+}
+%>

@@ -1,0 +1,15 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>BUJI PAC4J DEMO %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- logger name="org.pac4j" level="DEBUG" /-->
+  <logger name="io.buji" level="DEBUG" />
+  
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>

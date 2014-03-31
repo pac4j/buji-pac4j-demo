@@ -32,12 +32,12 @@ profile : <%=subject.getPrincipals()%>
 <%
 try {
 %>
-<a href="<%=fbClient.getRedirectionUrl(context, false, false)%>">Authenticate with Facebook</a><br />
-<a href="<%=twClient.getRedirectionUrl(context, false, false)%>">Authenticate with Twitter</a><br />
-<a href="<%=formClient.getRedirectionUrl(context, false, false)%>">Authenticate with form</a><br />
-<a href="<%=baClient.getRedirectionUrl(context, false, false)%>">Authenticate with basic auth</a><br />
-<a href="<%=casClient.getRedirectionUrl(context, false, false)%>">Authenticate with CAS</a><br />
-<a href="<%=vkClient.getRedirectionUrl(context, false, false)%>">Authenticate with Vk</a><br />
+<a href="<%=fbClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with Facebook</a><br />
+<a href="<%=twClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with Twitter</a><br />
+<a href="<%=formClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with form</a><br />
+<a href="<%=baClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with basic auth</a><br />
+<a href="<%=casClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with CAS</a><br />
+<a href="<%=vkClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with Vk</a><br />
 <%
 } catch (RequiresHttpAction e) {
 	// should not happen

@@ -29,7 +29,7 @@
         <dependency>
             <groupId>io.buji</groupId>
             <artifactId>buji-pac4j</artifactId>
-            <version>1.2.3-SNAPSHOT</version>
+            <version>1.2.3</version>
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>

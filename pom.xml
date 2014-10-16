@@ -22,7 +22,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>1.5.1</pac4jVersion>
+        <pac4jVersion>1.6.0-RC2-SNAPSHOT</pac4jVersion>
     </properties>
 
     <dependencies>
@@ -106,9 +106,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>8.1.7.v20120910</version>
+                <version>9.2.2.v20140723</version>
                 <configuration>
                     <webApp>
                         <contextPath>/</contextPath>

@@ -22,7 +22,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>1.6.0-RC2-SNAPSHOT</pac4jVersion>
+        <pac4jVersion>1.6.0</pac4jVersion>
     </properties>
 
     <dependencies>

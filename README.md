@@ -13,5 +13,5 @@ To start quickly, build the project and launch the web app with jetty :
     mvn clean install jetty:run
 
 To test, you can call a protected url by clicking on the "Protected by **xxx** : **xxx**/index.jsp" url, which will start the authentication process with the **xxx** provider.  
-Or you can click on the "Authenticate with **xxx*" link, to start manually the authentication process with the **xxx** provider.
+Or you can click on the "Authenticate with **xxx**" link, to start manually the authentication process with the **xxx** provider.
 

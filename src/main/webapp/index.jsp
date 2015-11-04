@@ -1,9 +1,9 @@
 <%@page import="org.pac4j.core.exception.RequiresHttpAction"%>
 <%@page import="org.apache.shiro.subject.Subject"%>
 <%@page import="org.apache.shiro.SecurityUtils"%>
-<%@page import="org.leleuj.WebUtils"%>
+<%@page import="org.pac4j.demo.shiro.util.WebUtils"%>
 <%@page import="io.buji.pac4j.*"%>
-<%@page import="org.pac4j.http.client.*"%>
+<%@page import="org.pac4j.http.client.indirect.*"%>
 <%@page import="org.pac4j.oauth.client.*"%>
 <%@page import="org.pac4j.cas.client.*"%>
 <%@page import="org.pac4j.saml.client.*"%>
@@ -12,10 +12,10 @@
 	FacebookClient fbClient = WebUtils.getObject(pageContext, FacebookClient.class, "facebookClient");
 	TwitterClient twClient = WebUtils.getObject(pageContext, TwitterClient.class, "twitterClient");
 	FormClient formClient = WebUtils.getObject(pageContext, FormClient.class, "formClient");
-	BasicAuthClient baClient = WebUtils.getObject(pageContext, BasicAuthClient.class, "basicAuthClient");
+	IndirectBasicAuthClient baClient = WebUtils.getObject(pageContext, IndirectBasicAuthClient.class, "basicAuthClient");
 	CasClient casClient = WebUtils.getObject(pageContext, CasClient.class, "casClient");
 	VkClient vkClient = WebUtils.getObject(pageContext, VkClient.class, "vkClient");
-	Saml2Client saml2Client = (Saml2Client) WebUtils.getObject(pageContext, Saml2Client.class, "saml2Client");
+	SAML2Client saml2Client = (SAML2Client) WebUtils.getObject(pageContext, SAML2Client.class, "saml2Client");
 	ShiroWebContext context = new ShiroWebContext(request, response);
 %>
 <h1>index</h1>
@@ -35,13 +35,13 @@ profile : <%=subject.getPrincipals()%>
 <%
 try {
 %>
-<a href="<%=fbClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with Facebook</a><br />
-<a href="<%=twClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with Twitter</a><br />
-<a href="<%=formClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with form</a><br />
-<a href="<%=baClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with basic auth</a><br />
-<a href="<%=casClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with CAS</a><br />
-<a href="<%=vkClient.getRedirectAction(context, false, false).getLocation()%>">Authenticate with Vk</a><br />
-<a href="<%=saml2Client.getRedirectAction(context, false, false).getLocation()%>">Authenticate with SAML</a><br />
+<a href="<%=fbClient.getRedirectAction(context, false).getLocation()%>">Authenticate with Facebook</a><br />
+<a href="<%=twClient.getRedirectAction(context, false).getLocation()%>">Authenticate with Twitter</a><br />
+<a href="<%=formClient.getRedirectAction(context, false).getLocation()%>">Authenticate with form</a><br />
+<a href="<%=baClient.getRedirectAction(context, false).getLocation()%>">Authenticate with basic auth</a><br />
+<a href="<%=casClient.getRedirectAction(context, false).getLocation()%>">Authenticate with CAS</a><br />
+<a href="<%=vkClient.getRedirectAction(context, false).getLocation()%>">Authenticate with Vk</a><br />
+<a href="<%=saml2Client.getRedirectAction(context, false).getLocation()%>">Authenticate with SAML</a><br />
 <%
 } catch (RequiresHttpAction e) {
 	// should not happen

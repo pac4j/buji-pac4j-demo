@@ -1,4 +1,4 @@
-package org.leleuj;
+package org.pac4j.demo.shiro.util;
 
 import javax.servlet.jsp.PageContext;
 

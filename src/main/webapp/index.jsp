@@ -7,7 +7,11 @@
 <%@page import="org.pac4j.oauth.client.*"%>
 <%@page import="org.pac4j.cas.client.*"%>
 <%@page import="org.pac4j.saml.client.*"%>
+<%@ page import="org.pac4j.core.client.Clients" %>
 <%
+	ShiroWebContext context = new ShiroWebContext(request, response);
+	Clients clients = WebUtils.getObject(pageContext, Clients.class, "clients");
+	clients.init(context);
 	Subject subject = SecurityUtils.getSubject();
 	FacebookClient fbClient = WebUtils.getObject(pageContext, FacebookClient.class, "facebookClient");
 	TwitterClient twClient = WebUtils.getObject(pageContext, TwitterClient.class, "twitterClient");
@@ -16,7 +20,6 @@
 	CasClient casClient = WebUtils.getObject(pageContext, CasClient.class, "casClient");
 	VkClient vkClient = WebUtils.getObject(pageContext, VkClient.class, "vkClient");
 	SAML2Client saml2Client = (SAML2Client) WebUtils.getObject(pageContext, SAML2Client.class, "saml2Client");
-	ShiroWebContext context = new ShiroWebContext(request, response);
 %>
 <h1>index</h1>
 <a href="facebook/index.jsp">Protected url by Facebook : facebook/index.jsp</a><br />

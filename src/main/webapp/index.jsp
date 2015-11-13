@@ -26,7 +26,7 @@
 <a href="twitter/index.jsp">Protected url by Twitter : twitter/index.jsp</a><br />
 <a href="form/index.jsp">Protected url by form authentication : form/index.jsp</a><br />
 <a href="basicauth/index.jsp">Protected url by basic auth : basicauth/index.jsp</a><br />
-<a href="cas/index.jsp">Protected url by CAS : cas/index.jsp</a><br />
+<a href="cas/index.jsp">Protected url by CAS : cas/index.jsp</a> (login = pwd)<br />
 <a href="vk/index.jsp">Protected url by Vk : vk/index.jsp</a><br />
 <a href="saml/index.jsp">Protected url by SAML : saml/index.jsp</a><br />
 <br />

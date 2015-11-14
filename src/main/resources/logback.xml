@@ -8,6 +8,7 @@
 
   <!-- logger name="org.pac4j" level="DEBUG" /-->
   <logger name="io.buji" level="DEBUG" />
+  <logger name="org.apache.shiro" level="DEBUG" />
   
   <root level="WARN">
     <appender-ref ref="STDOUT" />

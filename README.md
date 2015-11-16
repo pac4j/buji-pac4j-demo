@@ -2,7 +2,7 @@
   <img src="https://pac4j.github.io/pac4j/img/logo-shiro.png" width="300" />
 </p>
 
-This `buji-pac4j-demo` project is a Java web application to test the [buji-pac4j](https://github.com/bujiio/buji-pac4j) security extension with various authentication mechanisms: Facebook, Twitter, form, basic auth, CAS, SAML...
+This `buji-pac4j-demo` project is a Shiro web application to test the [buji-pac4j](https://github.com/bujiio/buji-pac4j) security extension with various authentication mechanisms: Facebook, Twitter, form, basic auth, CAS, SAML...
 
 ## Start & test
 

@@ -2,32 +2,32 @@
 <%@page import="org.apache.shiro.subject.Subject"%>
 <%@page import="org.apache.shiro.SecurityUtils"%>
 <%@page import="org.pac4j.demo.shiro.util.WebUtils"%>
-<%@page import="io.buji.pac4j.*"%>
+<%@page import="io.buji.pac4j.context.session.ShiroSessionStore"%>
 <%@page import="org.pac4j.http.client.indirect.*"%>
 <%@page import="org.pac4j.oauth.client.*"%>
 <%@page import="org.pac4j.cas.client.*"%>
 <%@page import="org.pac4j.saml.client.*"%>
 <%@ page import="org.pac4j.core.client.Clients" %>
+<%@ page import="org.pac4j.core.context.J2EContext" %>
 <%
-	ShiroWebContext context = new ShiroWebContext(request, response);
+	J2EContext context = new J2EContext(request, response, new ShiroSessionStore());
 	Clients clients = WebUtils.getObject(pageContext, Clients.class, "clients");
-	clients.init(context);
 	Subject subject = SecurityUtils.getSubject();
-	FacebookClient fbClient = WebUtils.getObject(pageContext, FacebookClient.class, "facebookClient");
-	TwitterClient twClient = WebUtils.getObject(pageContext, TwitterClient.class, "twitterClient");
-	FormClient formClient = WebUtils.getObject(pageContext, FormClient.class, "formClient");
-	IndirectBasicAuthClient baClient = WebUtils.getObject(pageContext, IndirectBasicAuthClient.class, "basicAuthClient");
-	CasClient casClient = WebUtils.getObject(pageContext, CasClient.class, "casClient");
-	VkClient vkClient = WebUtils.getObject(pageContext, VkClient.class, "vkClient");
-	SAML2Client saml2Client = (SAML2Client) WebUtils.getObject(pageContext, SAML2Client.class, "saml2Client");
+	FacebookClient fbClient = (FacebookClient) clients.findClient("FacebookClient");
+	TwitterClient twClient = (TwitterClient) clients.findClient("TwitterClient");
+	FormClient formClient = (FormClient) clients.findClient("FormClient");
+	IndirectBasicAuthClient baClient = (IndirectBasicAuthClient) clients.findClient("IndirectBasicAuthClient");
+	CasClient casClient = (CasClient) clients.findClient("CasClient");
+	VkClient vkClient = (VkClient) clients.findClient("VkClient");
+	SAML2Client saml2Client = (SAML2Client) clients.findClient("SAML2Client");
 %>
 <h1>index</h1>
-<a href="facebook/index.jsp">Protected url by Facebook : facebook/index.jsp</a> (real account)<br />
-<a href="twitter/index.jsp">Protected url by Twitter : twitter/index.jsp</a> (real account)<br />
-<a href="form/index.jsp">Protected url by form authentication : form/index.jsp</a> (login = pwd)<br />
-<a href="basicauth/index.jsp">Protected url by basic auth : basicauth/index.jsp</a> (login = pwd)<br />
-<a href="cas/index.jsp">Protected url by CAS : cas/index.jsp</a> (login = pwd)<br />
-<a href="vk/index.jsp">Protected url by Vk : vk/index.jsp</a> (real account)<br />
+<a href="facebook/index.jsp">Protected url by Facebook : facebook/index.jsp</a> (use a real account)<br />
+<a href="twitter/index.jsp">Protected url by Twitter : twitter/index.jsp</a> (use a real account)<br />
+<a href="form/index.jsp">Protected url by form authentication : form/index.jsp</a> (use login = pwd)<br />
+<a href="basicauth/index.jsp">Protected url by basic auth : basicauth/index.jsp</a> (use login = pwd)<br />
+<a href="cas/index.jsp">Protected url by CAS : cas/index.jsp</a> (use login = pwd)<br />
+<a href="vk/index.jsp">Protected url by Vk : vk/index.jsp</a> (use a real account)<br />
 <a href="saml/index.jsp">Protected url by SAML : saml/index.jsp</a><br />
 <br />
 <a href="logout">logout</a>

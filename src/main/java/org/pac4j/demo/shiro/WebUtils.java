@@ -1,4 +1,4 @@
-package org.pac4j.demo.shiro.util;
+package org.pac4j.demo.shiro;
 
 import javax.servlet.jsp.PageContext;
 

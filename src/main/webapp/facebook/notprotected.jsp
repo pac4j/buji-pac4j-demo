@@ -1,7 +1,7 @@
 <%@page import="org.apache.shiro.SecurityUtils"%>
 <%@ page import="org.pac4j.core.profile.CommonProfile" %>
 <%@ page import="java.util.List" %>
-<%@ page import="io.buji.pac4j.token.Pac4jPrincipal" %>
+<%@ page import="io.buji.pac4j.subject.Pac4jPrincipal" %>
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>
 <%
     List<CommonProfile> profiles = null;

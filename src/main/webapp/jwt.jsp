@@ -2,7 +2,7 @@
 <%@page import="org.apache.shiro.SecurityUtils"%>
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>
 <%@ page import="org.pac4j.jwt.profile.JwtGenerator" %>
-<%@ page import="org.pac4j.core.profile.CommonProfile" %>
+<%@ page import="io.buji.pac4j.subject.Pac4jPrincipal" %>
 <%
     Subject subject = SecurityUtils.getSubject();
 %>
@@ -14,8 +14,10 @@
     String token = null;
     final PrincipalCollection col = subject.getPrincipals();
     if (col != null) {
-        final CommonProfile profile = (CommonProfile) col.asList().get(1);
-        token = generator.generate(profile);
+        final Pac4jPrincipal principal = col.oneByType(Pac4jPrincipal.class);
+        if (principal != null) {
+            token = generator.generate(principal.getProfile());
+        }
     }
 %>
 token: <%=token%><br />

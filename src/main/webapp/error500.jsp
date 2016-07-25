@@ -1,3 +1,4 @@
+<%@page session="false" %>
 <html>
 <body>
 <h1>internal error</h1>

@@ -1,4 +1,4 @@
-<%@page import="org.pac4j.demo.shiro.util.WebUtils"%>
+<%@page import="org.pac4j.demo.shiro.WebUtils"%>
 <%@page import="org.pac4j.http.client.indirect.FormClient"%>
 <%
 	FormClient formClient = WebUtils.getObject(pageContext, FormClient.class, "formClient");

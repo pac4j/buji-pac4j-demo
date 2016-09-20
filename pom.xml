@@ -22,7 +22,7 @@
 
     <properties>
         <pac4jVersion>1.9.2</pac4jVersion>
-        <bujiVersion>2.0.2-SNAPSHOT</bujiVersion>
+        <bujiVersion>2.0.2</bujiVersion>
         <javaVersion>1.8</javaVersion>
     </properties>
 

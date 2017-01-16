@@ -21,7 +21,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>1.9.5-SNAPSHOT</pac4jVersion>
+        <pac4jVersion>1.9.5</pac4jVersion>
         <bujiVersion>2.0.4-SNAPSHOT</bujiVersion>
         <javaVersion>1.8</javaVersion>
     </properties>

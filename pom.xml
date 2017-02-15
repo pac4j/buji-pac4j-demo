@@ -18,15 +18,32 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>apache-snapshots</id>
+            <name>Apache Snapshots</name>
+            <url>https://repository.apache.org/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
     <properties>
         <pac4jVersion>1.9.6</pac4jVersion>
         <bujiVersion>2.2.0-SNAPSHOT</bujiVersion>
         <javaVersion>1.8</javaVersion>
+        <shiro.version>1.4.0-SNAPSHOT</shiro.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-servlet-plugin</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
         <dependency>
             <groupId>io.buji</groupId>
             <artifactId>buji-pac4j</artifactId>

@@ -40,11 +40,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-servlet-plugin</artifactId>
-            <version>${shiro.version}</version>
-        </dependency>
-        <dependency>
             <groupId>io.buji</groupId>
             <artifactId>buji-pac4j</artifactId>
             <version>${bujiVersion}</version>

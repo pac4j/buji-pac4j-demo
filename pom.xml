@@ -29,7 +29,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
+        <!--repository>
             <id>apache-staging-repo</id>
             <name>Apache Staging Repository</name>
             <url>https://repository.apache.org/content/repositories/orgapacheshiro-1018/</url>
@@ -39,12 +39,12 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-        </repository>
+        </repository-->
     </repositories>
 
     <properties>
         <pac4jVersion>1.9.7</pac4jVersion>
-        <bujiVersion>2.2.0-SNAPSHOT</bujiVersion>
+        <bujiVersion>2.2.0</bujiVersion>
         <javaVersion>1.8</javaVersion>
         <shiro.version>1.4.0</shiro.version>
     </properties>

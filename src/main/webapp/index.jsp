@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="io.buji.pac4j.subject.Pac4jPrincipal" %>
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>
+<%@ page import="org.apache.shiro.session.Session" %>
 <%
     List<CommonProfile> profiles = null;
     final PrincipalCollection principals = SecurityUtils.getSubject().getPrincipals();
@@ -11,6 +12,10 @@
         if (principal != null) {
             profiles = principal.getProfiles();
         }
+    }
+    String sessionId = null;
+    if (session != null) {
+        sessionId = session.getId();
     }
 %>
 <h1>index</h1>
@@ -33,6 +38,10 @@
 <br />
 <a href="forceLogin?client_name=FacebookClient">Force Facebook login</a> (even if already authenticated)<br />
 <br />
-<a href="/logout?url=/?forcepostlogouturl">logout</a>
+<a href="/logout">Shiro local logout</a><br />
+<a href="/pac4jLogout?url=/?forcepostlogouturl">pac4j local logout</a><br />
+<a href="/pac4jCentralLogout?url=/?forcepostlogouturlafteridp">pac4j central local logout</a>
 <br /><br />
-profiles: <%=profiles%>
+profiles: <%=profiles%><br />
+<br />
+sessionId: <%=sessionId%>

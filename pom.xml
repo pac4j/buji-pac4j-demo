@@ -112,7 +112,12 @@
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-stormpath</artifactId>
+            <artifactId>pac4j-couch</artifactId>
+            <version>${pac4jVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pac4j</groupId>
+            <artifactId>pac4j-kerberos</artifactId>
             <version>${pac4jVersion}</version>
         </dependency>
         <dependency>

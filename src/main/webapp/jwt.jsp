@@ -3,6 +3,7 @@
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>
 <%@ page import="org.pac4j.jwt.profile.JwtGenerator" %>
 <%@ page import="io.buji.pac4j.subject.Pac4jPrincipal" %>
+<%@ page import="org.pac4j.jwt.config.signature.SecretSignatureConfiguration" %>
 <%
     Subject subject = SecurityUtils.getSubject();
 %>
@@ -10,7 +11,7 @@
 <a href="..">Back</a><br />
 <br /><br />
 <%
-    final JwtGenerator generator = new JwtGenerator("12345678901234567890123456789012");
+    final JwtGenerator generator = new JwtGenerator(new SecretSignatureConfiguration("12345678901234567890123456789012"));
     String token = null;
     final PrincipalCollection col = subject.getPrincipals();
     if (col != null) {

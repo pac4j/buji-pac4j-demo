@@ -44,7 +44,7 @@
 
     <properties>
         <pac4jVersion>2.2.1</pac4jVersion>
-        <bujiVersion>2.9.0-SNAPSHOT</bujiVersion>
+        <bujiVersion>2.9.0</bujiVersion>
         <javaVersion>1.8</javaVersion>
         <shiro.version>1.2.3</shiro.version>
     </properties>

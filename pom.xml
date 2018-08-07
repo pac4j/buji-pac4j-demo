@@ -43,7 +43,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>3.0.2-SNAPSHOT</pac4jVersion>
+        <pac4jVersion>3.0.2</pac4jVersion>
         <bujiVersion>4.0.0-SNAPSHOT</bujiVersion>
         <javaVersion>1.8</javaVersion>
         <shiro.version>1.4.0</shiro.version>

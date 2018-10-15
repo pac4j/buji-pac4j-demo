@@ -43,7 +43,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>3.0.2</pac4jVersion>
+        <pac4jVersion>3.3.0</pac4jVersion>
         <bujiVersion>4.0.0</bujiVersion>
         <javaVersion>1.8</javaVersion>
         <shiro.version>1.4.0</shiro.version>
@@ -54,6 +54,11 @@
             <groupId>io.buji</groupId>
             <artifactId>buji-pac4j</artifactId>
             <version>${bujiVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pac4j</groupId>
+            <artifactId>pac4j-core</artifactId>
+            <version>${pac4jVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>

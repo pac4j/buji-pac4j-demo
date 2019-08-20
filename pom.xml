@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.pac4j.demo</groupId>
     <artifactId>buji-pac4j-demo</artifactId>
-    <version>4.1.0-SNAPSHOT</version>
+    <version>4.1.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>buji-pac4j demo</name>
 
@@ -43,10 +43,10 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>3.4.0</pac4jVersion>
-        <bujiVersion>4.1.0</bujiVersion>
+        <pac4jVersion>3.7.0</pac4jVersion>
+        <bujiVersion>4.1.1-SNAPSHOT</bujiVersion>
         <javaVersion>1.8</javaVersion>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.4.1</shiro.version>
     </properties>
 
     <dependencies>

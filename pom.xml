@@ -43,10 +43,9 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>4.0.0-RC3-SNAPSHOT</pac4jVersion>
+        <pac4jVersion>4.0.0-RC3</pac4jVersion>
         <bujiVersion>5.0.0-RC3-SNAPSHOT</bujiVersion>
         <javaVersion>1.8</javaVersion>
-        <shiro.version>1.4.2</shiro.version>
     </properties>
 
     <dependencies>

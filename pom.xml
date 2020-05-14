@@ -44,7 +44,7 @@
 
     <properties>
         <pac4jVersion>4.0.1</pac4jVersion>
-        <bujiVersion>5.0.0</bujiVersion>
+        <bujiVersion>5.0.1</bujiVersion>
         <javaVersion>1.8</javaVersion>
     </properties>
 

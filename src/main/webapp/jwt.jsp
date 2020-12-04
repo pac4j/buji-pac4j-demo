@@ -1,3 +1,4 @@
+<%@page session="false" %>
 <%@page import="org.apache.shiro.subject.Subject"%>
 <%@page import="org.apache.shiro.SecurityUtils"%>
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>

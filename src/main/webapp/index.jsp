@@ -1,11 +1,11 @@
+<%@page session="false" %>
 <%@page import="org.apache.shiro.SecurityUtils"%>
-<%@ page import="org.pac4j.core.profile.CommonProfile" %>
 <%@ page import="java.util.List" %>
 <%@ page import="io.buji.pac4j.subject.Pac4jPrincipal" %>
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>
-<%@ page import="org.apache.shiro.session.Session" %>
+<%@ page import="org.pac4j.core.profile.UserProfile" %>
 <%
-    List<CommonProfile> profiles = null;
+    List<UserProfile> profiles = null;
     final PrincipalCollection principals = SecurityUtils.getSubject().getPrincipals();
     if (principals != null) {
         final Pac4jPrincipal principal = principals.oneByType(Pac4jPrincipal.class);
@@ -13,9 +13,9 @@
             profiles = principal.getProfiles();
         }
     }
-    String sessionId = null;
-    if (session != null) {
-        sessionId = session.getId();
+    String sessionId = "nosession";
+    if (request.getSession(false) != null) {
+        sessionId = request.getSession(false).getId();
     }
 %>
 <h1>index</h1>
@@ -23,7 +23,7 @@
 <a href="facebook/notprotected.jsp">Not protected page: facebook/notprotected.jsp</a> (no authentication required)<br />
 <a href="facebookadmin/index.jsp">Protected url by Facebook with ROLE_ADMIN: facebookadmin/index.jsp</a> (use a real account)<br />
 <a href="facebookcustom/index.jsp">Protected url by Facebook with custom authorizer (= must be a <em>CommonProfile</em> where the username starts with "jle"): facebookcustom/index.jsp</a> (login with form or basic authentication before with jle* username)<br />
-<a href="twitter/index.jsp">Protected url by Twitter: twitter/index.jsp</a> or <a href="twitter/index.jsp?client_name=FacebookClient">by Facebook: twitter/index.jsp?client_name=FacebookClient</a> (use a real account)<br />
+<a href="twitter/index.jsp">Protected url by Twitter: twitter/index.jsp</a> or <a href="twitter/index.jsp?force_client=FacebookClient">by Facebook: twitter/index.jsp?force_client=FacebookClient</a> (use a real account)<br />
 <a href="form/index.jsp">Protected url by form authentication: form/index.jsp</a> (use login = pwd)<br />
 <a href="basicauth/index.jsp">Protected url by indirect basic auth: basicauth/index.jsp</a> (use login = pwd)<br />
 <a href="cas/index.jsp">Protected url by CAS: cas/index.jsp</a> (use login = pwd)<br />

@@ -1,5 +1,6 @@
 package org.pac4j.demo.shiro;
 
+import io.buji.pac4j.context.ShiroSessionStore;
 import org.pac4j.core.client.Client;
 import org.pac4j.core.config.Config;
 import org.pac4j.core.context.JEEContext;
@@ -24,7 +25,7 @@ public final class ForceLoginFilter implements Filter {
         final HttpServletResponse response = (HttpServletResponse) servletResponse;
         final JEEContext context = new JEEContext(request, response);
         final Client client = config.getClients().findClient(request.getParameter(Pac4jConstants.DEFAULT_CLIENT_NAME_PARAMETER)).get();
-        JEEHttpActionAdapter.INSTANCE.adapt((HttpAction) client.getRedirectionAction(context).get(), context);
+        JEEHttpActionAdapter.INSTANCE.adapt((HttpAction) client.getRedirectionAction(context, ShiroSessionStore.INSTANCE).get(), context);
     }
 
     @Override

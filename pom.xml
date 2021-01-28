@@ -43,8 +43,8 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>5.0.0-SNAPSHOT</pac4jVersion>
-        <bujiVersion>6.0.0-SNAPSHOT</bujiVersion>
+        <pac4jVersion>5.0.0-RC1</pac4jVersion>
+        <bujiVersion>6.0.0-RC1</bujiVersion>
         <javaVersion>11</javaVersion>
     </properties>
 

@@ -44,7 +44,7 @@
 
     <properties>
         <pac4jVersion>5.0.0-RC2</pac4jVersion>
-        <bujiVersion>6.0.0-RC2-SNAPSHOT</bujiVersion>
+        <bujiVersion>6.0.0-RC2</bujiVersion>
         <javaVersion>11</javaVersion>
     </properties>
 

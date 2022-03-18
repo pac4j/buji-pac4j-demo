@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.pac4j.demo</groupId>
     <artifactId>buji-pac4j-demo</artifactId>
-    <version>6.1.0-SNAPSHOT</version>
+    <version>7.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>buji-pac4j demo</name>
 
@@ -43,8 +43,8 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>5.3.1</pac4jVersion>
-        <bujiVersion>6.1.0</bujiVersion>
+        <pac4jVersion>5.4.0-SNAPSHOT</pac4jVersion>
+        <bujiVersion>7.0.0-SNAPSHOT</bujiVersion>
         <javaVersion>11</javaVersion>
     </properties>
 
@@ -56,7 +56,7 @@
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-jee</artifactId>
+            <artifactId>pac4j-javaee</artifactId>
             <version>${pac4jVersion}</version>
         </dependency>
         <dependency>

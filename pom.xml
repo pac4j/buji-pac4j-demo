@@ -43,7 +43,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>5.4.0</pac4jVersion>
+        <pac4jVersion>5.4.2</pac4jVersion>
         <bujiVersion>7.0.0</bujiVersion>
         <javaVersion>11</javaVersion>
     </properties>

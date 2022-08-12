@@ -61,21 +61,6 @@
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-oauth</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-cas</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-http</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
             <artifactId>pac4j-saml</artifactId>
             <version>${pac4jVersion}</version>
         </dependency>
@@ -86,37 +71,7 @@
         </dependency>
         <dependency>
             <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-gae</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-jwt</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-ldap</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-sql</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-mongo</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-couch</artifactId>
-            <version>${pac4jVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-kerberos</artifactId>
+            <artifactId>pac4j-http</artifactId>
             <version>${pac4jVersion}</version>
         </dependency>
         <dependency>

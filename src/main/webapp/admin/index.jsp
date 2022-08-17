@@ -6,6 +6,11 @@
 <%@ page import="org.apache.shiro.subject.Subject" %>
 <%@ page import="org.apache.shiro.subject.PrincipalCollection" %>
 <%
+	response.setHeader("Cache-Control","must-revalidate,no-cache,no-store");
+	response.setHeader("Pragma","no-cache");
+	response.setDateHeader ("Expires", 0);
+%>
+<%
 	final Subject subject = SecurityUtils.getSubject();
 	final PrincipalCollection principals = subject.getPrincipals();
 	final Pac4jPrincipal principal = principals.oneByType(Pac4jPrincipal.class);

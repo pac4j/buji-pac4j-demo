@@ -1,3 +1,9 @@
+<%@page session="false" %>
+<%
+    response.setHeader("Cache-Control","must-revalidate,no-cache,no-store");
+    response.setHeader("Pragma","no-cache");
+    response.setDateHeader ("Expires", 0);
+%>
 <html>
 <body>
 <form method="POST">

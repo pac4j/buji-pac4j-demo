@@ -6,6 +6,11 @@
 <%@ page import="org.pac4j.core.profile.UserProfile" %>
 <%@ page import="org.apache.shiro.subject.Subject" %>
 <%
+    response.setHeader("Cache-Control","must-revalidate,no-cache,no-store");
+    response.setHeader("Pragma","no-cache");
+    response.setDateHeader ("Expires", 0);
+%>
+<%
     List<UserProfile> profiles = null;
     final Subject subject = SecurityUtils.getSubject();
     final PrincipalCollection principals = subject.getPrincipals();
@@ -44,4 +49,5 @@
 <b>sessionId:</b> <%=sessionId%>
 <br/><br/>
 subject.hasRole("ROLE_ADMIN"): <%=subject.hasRole("ROLE_ADMIN")%><br/>
-subject.hasRole("ROLE_USER"): <%=subject.hasRole("ROLE_USER")%>
+subject.hasRole("ROLE_USER"): <%=subject.hasRole("ROLE_USER")%><br/>
+subject.isAuthenticated(): <%=subject.isAuthenticated()%>

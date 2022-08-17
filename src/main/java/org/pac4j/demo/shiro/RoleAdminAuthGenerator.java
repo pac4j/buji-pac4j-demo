@@ -14,7 +14,7 @@ public class RoleAdminAuthGenerator implements AuthorizationGenerator {
     public Optional<UserProfile> generate(final WebContext context, final SessionStore sessionStore, final UserProfile profile) {
         profile.addRole("ROLE_ADMIN");
         ((CommonProfile) profile).removeLoginData(); // remove the access token to reduce size and make the remember-me work
-        profile.setRemembered(true);
+        //profile.setRemembered(true);
         return Optional.of(profile);
     }
 }

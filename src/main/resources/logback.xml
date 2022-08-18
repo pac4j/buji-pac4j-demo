@@ -7,6 +7,7 @@
   </appender>
 
   <logger name="org.pac4j.core.engine" level="DEBUG" />
+  <logger name="io.buji.pac4j" level="INFO" />
 
   <root level="WARN">
     <appender-ref ref="STDOUT" />

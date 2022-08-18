@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.pac4j.demo</groupId>
     <artifactId>buji-pac4j-demo</artifactId>
-    <version>7.0.0-SNAPSHOT</version>
+    <version>8.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>buji-pac4j demo</name>
 
@@ -44,7 +44,8 @@
 
     <properties>
         <pac4jVersion>5.4.5</pac4jVersion>
-        <bujiVersion>7.0.0</bujiVersion>
+        <bujiVersion>8.0.0-SNAPSHOT</bujiVersion>
+        <jeePac4jVersion>7.0.0</jeePac4jVersion>
         <javaVersion>11</javaVersion>
     </properties>
 
@@ -54,6 +55,13 @@
             <artifactId>buji-pac4j</artifactId>
             <version>${bujiVersion}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.pac4j</groupId>
+            <artifactId>javaee-pac4j</artifactId>
+            <version>${jeePac4jVersion}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.pac4j</groupId>
             <artifactId>pac4j-javaee</artifactId>
@@ -74,22 +82,11 @@
             <artifactId>pac4j-http</artifactId>
             <version>${pac4jVersion}</version>
         </dependency>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.11</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>2.3.3</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>

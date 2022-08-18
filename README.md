@@ -2,15 +2,16 @@
   <img src="https://pac4j.github.io/pac4j/img/logo-shiro.png" width="300" />
 </p>
 
-This `buji-pac4j-demo` project is a Shiro web application to test the [buji-pac4j](https://github.com/bujiio/buji-pac4j) security library with various authentication mechanisms: Facebook, Twitter, form, basic auth, CAS, SAML...
+This `buji-pac4j-demo` project is a Shiro web application using:
+- the Shiro security library
+- the [javaee-pac4j](https://github.com/pac4j/jee-pac4j) security library
+- the [buji-pac4j](https://github.com/bujiio/buji-pac4j) bridge from pac4j to Shiro.
 
 ## Start & test
 
-Build the project and launch the web app with jetty on [http://localhost:8080](http://localhost:8080):
+You can build the project and run it on [http://localhost:8080](http://localhost:8080) using the following commands:
 
     cd buji-pac4j-demo
     mvn clean package jetty:run
-
-To test, you can call a protected url by clicking on the "Protected url by **xxx**" link, which will start the authentication process with the **xxx** provider.
 
 If you want to use `Guice`, please see the [buji-guice-demo](https://github.com/vonZeppelin/buji-guice-demo).

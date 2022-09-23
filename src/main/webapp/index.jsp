@@ -33,6 +33,7 @@
 <a href="/logout">Shiro logout</a><br />
 
 <h2>pac4j:</h2>
+<a href="/cas/index.jsp">Protected URL by CAS: cas/index.jsp</a> (use login = pwd)<br />
 <a href="/saml2/index.jsp">Protected URL by SAML2: saml2/index.jsp</a> (use testpac4j at gmail.com / Pac4jtest)<br />
 <a href="/oidc/index.jsp">Protected URL by Google OpenID Connect: oidc/index.jsp</a> (use a real account) => ROLE_ADMIN<br />
 <a href="/protected/index.jsp">Protected URL: protected/index.jsp</a> (won't start any login process)<br />

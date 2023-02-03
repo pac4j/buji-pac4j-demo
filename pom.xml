@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.pac4j.demo</groupId>
     <artifactId>buji-pac4j-demo</artifactId>
-    <version>8.0.0-SNAPSHOT</version>
+    <version>9.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>buji-pac4j demo</name>
 
@@ -43,10 +43,10 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>5.7.0</pac4jVersion>
-        <bujiVersion>8.0.0</bujiVersion>
-        <jeePac4jVersion>7.1.0</jeePac4jVersion>
-        <javaVersion>11</javaVersion>
+        <pac4jVersion>6.0.0-RC6-SNAPSHOT</pac4jVersion>
+        <bujiVersion>9.0.0-SNAPSHOT</bujiVersion>
+        <jeePac4jVersion>8.0.0-SNAPSHOT</jeePac4jVersion>
+        <javaVersion>17</javaVersion>
     </properties>
 
     <dependencies>
@@ -106,7 +106,11 @@
                     <checksumAlgorithm>MD5</checksumAlgorithm>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

@@ -43,7 +43,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>6.0.0-RC10</pac4jVersion>
+        <pac4jVersion>6.0.0-SNAPSHOT</pac4jVersion>
         <bujiVersion>9.0.0-SNAPSHOT</bujiVersion>
         <jeePac4jVersion>8.0.0-SNAPSHOT</jeePac4jVersion>
         <javaVersion>17</javaVersion>

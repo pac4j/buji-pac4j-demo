@@ -44,7 +44,7 @@
 
     <properties>
         <pac4jVersion>6.0.1</pac4jVersion>
-        <bujiVersion>9.0.0-SNAPSHOT</bujiVersion>
+        <bujiVersion>9.0.0</bujiVersion>
         <jeePac4jVersion>8.0.0-SNAPSHOT</jeePac4jVersion>
         <javaVersion>17</javaVersion>
     </properties>

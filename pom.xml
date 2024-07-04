@@ -123,7 +123,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.54.v20240208</version>
+                <version>9.4.55.v20240627</version>
                 <configuration>
                     <webApp>
                         <contextPath>/</contextPath>

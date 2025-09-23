@@ -43,9 +43,9 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>6.0.1</pac4jVersion>
-        <bujiVersion>9.0.0</bujiVersion>
-        <jeePac4jVersion>8.0.0</jeePac4jVersion>
+        <pac4jVersion>6.2.2</pac4jVersion>
+        <bujiVersion>9.1.0</bujiVersion>
+        <jeePac4jVersion>8.0.1</jeePac4jVersion>
         <javaVersion>17</javaVersion>
     </properties>
 
@@ -91,7 +91,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.14</version>
+            <version>1.5.18</version>
         </dependency>
     </dependencies>
     <build>
@@ -114,7 +114,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.12.1</version>
+                <version>3.14.1</version>
                 <configuration>
                     <release>${javaVersion}</release>
                     <encoding>UTF-8</encoding>
@@ -123,7 +123,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.54.v20240208</version>
+                <version>9.4.57.v20241219</version>
                 <configuration>
                     <webApp>
                         <contextPath>/</contextPath>

@@ -21,7 +21,7 @@
     </repositories>
 
     <properties>
-        <pac4jVersion>6.4.2</pac4jVersion>
+        <pac4jVersion>6.4.3</pac4jVersion>
         <bujiVersion>9.1.1</bujiVersion>
         <jeePac4jVersion>8.0.3</jeePac4jVersion>
         <javaVersion>17</javaVersion>

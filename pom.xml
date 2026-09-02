@@ -22,7 +22,7 @@
 
     <properties>
         <pac4jVersion>6.5.6</pac4jVersion>
-        <bujiVersion>9.1.2</bujiVersion>
+        <bujiVersion>10.0.0-SNAPSHOT</bujiVersion>
         <jeePac4jVersion>8.0.3</jeePac4jVersion>
         <javaVersion>17</javaVersion>
     </properties>
@@ -36,13 +36,13 @@
 
         <dependency>
             <groupId>org.pac4j</groupId>
-            <artifactId>javaee-pac4j</artifactId>
+            <artifactId>jakartaee-pac4j</artifactId>
             <version>${jeePac4jVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.pac4j</groupId>
-            <artifactId>pac4j-javaee</artifactId>
+            <artifactId>pac4j-jakartaee</artifactId>
             <version>${pac4jVersion}</version>
         </dependency>
         <dependency>
@@ -101,7 +101,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.58.v20250814</version>
+                <version>11.0.26</version>
                 <configuration>
                     <webApp>
                         <contextPath>/</contextPath>

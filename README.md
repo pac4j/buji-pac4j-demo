@@ -4,7 +4,7 @@
 
 This `buji-pac4j-demo` project is a Shiro web application using:
 - the Shiro security library
-- the [javaee-pac4j](https://github.com/pac4j/jee-pac4j) security library
+- the [jakartaee-pac4j](https://github.com/pac4j/jee-pac4j) security library
 - the [buji-pac4j](https://github.com/bujiio/buji-pac4j) bridge from pac4j to Shiro.
 
 ## Start & test

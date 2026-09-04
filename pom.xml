@@ -22,7 +22,7 @@
 
     <properties>
         <pac4jVersion>6.5.7</pac4jVersion>
-        <bujiVersion>10.0.0-SNAPSHOT</bujiVersion>
+        <bujiVersion>10.0.0</bujiVersion>
         <jeePac4jVersion>8.0.3</jeePac4jVersion>
         <javaVersion>17</javaVersion>
     </properties>
